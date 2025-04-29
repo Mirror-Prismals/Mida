@@ -1,5 +1,6 @@
 # Mida
 Mida Music Programming Language
+
 One of the main challenges in teaching a language model to make music is that there is currently no system that affords an LLM the proper tools to express musical ideas in text form. Today im happy to present a notation language I've designed called "Mida" which is aimed at alleviating these stress points and moving the field towards models which are more capable at generating music without switching modes. Mida is desgined to be a much better alternative to ABC notation or RAW midi as text. It's expressive, human readable, and contains minimal boilerplate. 
 
 While its possible generate musical patches using LLMs with programming languages like Faust, ChucK, Humdrum, and others, none of these solutions provide what LLMs really need: A fully text based system for representing a complete song. It's more of a markdown language that a programming language.
