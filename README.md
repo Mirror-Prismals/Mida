@@ -1,6 +1,5 @@
 # Mida
 Mida Music Programming Language
-
 One of the main challenges in teaching a language model to make music is that there is currently no system that affords an LLM the proper tools to express musical ideas in text form. Today im happy to present a notation language I've designed called "Mida" which is aimed at alleviating these stress points and moving the field towards models which are more capable at generating music without switching modes. Mida is desgined to be a much better alternative to ABC notation or RAW midi as text. It's expressive, human readable, and contains minimal boilerplate. 
 
 While its possible generate musical patches using LLMs with programming languages like Faust, ChucK, Humdrum, and others, none of these solutions provide what LLMs really need: A fully text based system for representing a complete song. It's more of a markdown language that a programming language.
@@ -23,11 +22,11 @@ This is an **Audicle.** It's the basic building block of everything in mida. In 
 ```mida
 *C#4~E4~G#4 - - - | . . . .* || Cmaj 4th Octave Quarter Note + Quarter Note Rest |>
 ```
+Next we will cover multitracking, lyrics, drums, loops, and more; but first, I feel as though it would be worth mentioning how the above Audicle would be printed. Mida perscribes a specific way that audicles be printed known as the Audicle Log. Essentially, the composition is played where each 16th note event gets its own line. this makes it possible to debug music and align tracks without playing them aloud.
 
 
 ## Mida Basics: Chaining Audicles + The Audicle Log
 
-Next we will cover multitracking, lyrics, drums, loops, and more; but first, I feel as though it would be worth mentioning how the above Audicle would be printed. Mida perscribes a specific way that audicles be printed known as the Audicle Log. Essentially, the composition is played where each 16th note event gets its own line. this makes it possible to debug music and align tracks without playing them aloud.
 
 As an example, ill connect two Audicles with a tilde, which means they will start at the same time, then I'll show what the log output would look like.
 
