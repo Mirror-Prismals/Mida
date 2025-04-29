@@ -74,4 +74,4 @@ The contents of the block are delimited by single quotes, like so: Each audicle 
 '
 ```
 
-Since they don't need to be connected by tildes, Mida blawcs open the door for non-local Audicles to have synchronous  start times. This makes it much easier to manage layered compositions without having to keep everything in one chain. 
+Since they don't need to be connected by tildes, Mida blawcs open the door for non-local Audicles to have synchronous start times. This makes it much easier to manage layered compositions without having to keep everything in one chain. 
