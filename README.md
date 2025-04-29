@@ -11,16 +11,46 @@ Below is the beginning of the Mida README
 Mida is a musical language designed to be fully text based drop in replacement for midi. Unlike ABC notation, mida supports drums, lyrics, and multitracked composition. Let's begin learning how to write mida
 
 
-```
+```mida
 *C4 E4 G4*
 ```  
 
 
-This is an **Audicle.** It's the basic building block of everything in mida. In mida, an audicle is delimited by asterisks, and the information inside will be played on a quantized 16th note grid, no matter what, so this audicle you see here is three sixteenth notes. To add sustains and rests, we simply add a period or a hyphen for each 16th sustain or 16th note rest we want to add, and to make notes trigger polyphonically, we connect them with a tilde. To keep things well organized, we can use pipes to look like measure lines, but these will be ignored by our parser. Comments are done with double pipes, and multi line comments are endcapped with a pipe and a greater-than symbol. Notes must have an octave and a pitch, and optionally an accidental with `#` or `b`
+This is an **Audicle.** It's the basic building block of everything in mida. In mida, an audicle is delimited by asterisks, and the information inside will be played on a quantized 16th note grid, no matter what, so this audicle you see here is three sixteenth notes. To add sustains and rests, we simply add a period or a hyphen for each 16th sustain or 16th note rest we want to add, and to make notes trigger polyphonically, we connect them with a tilde. To keep things well organized, we can use pipes to look like measure lines, but these will be ignored by our parser. Comments are done with double pipes outside audicles, and multi line comments are endcapped with a pipe and a greater-than symbol. Notes must have an octave and a pitch, and optionally an accidental with `#` or `b`
 
 
+```mida
+*C#4~E4~G#4 - - - | . . . .* || Cmaj 4th Octave Quarter Note + Quarter Note Rest |>
 ```
-*C#4~E4~G#4 - - - | . . .*
+
+Next we will cover multitracking, lyrics, drums, loops, and more; but first, I feel as though it would be worth mentioning how the above Audicle would be printed. Mida perscribes a specific way that audicles be printed known as the Audicle Log. Essentially, the composition is played where each 16th note event gets its own line. this makes it possible to debug music and align tracks without playing them aloud.
+
+As an example, ill connect two Audicles with a tilde, which means they will start at the same time, then I'll show what the log output would look like.
+
+```mida
+*C#4~E4~G#4 - - - | . . . .*~*F#1~F#2 - - - | - - - -*
 ```
 
-Next we will cover multitracking, lyrics, and drums.
+output
+
+
+```mida
+C#4~E4~G4 F#1~F#2
+
+\- -
+
+\- -
+
+\- -
+
+. -
+
+. -
+
+. -
+
+. -
+```
+
+In essense, the Audicle Log is your primary debugging tool, aside from your ears. 
+
