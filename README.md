@@ -59,11 +59,11 @@ In essense, the Audicle Log is your primary debugging tool, aside from your ears
 
 ## Mida Basics: The Blawc
 
-The second way to do multitrack compositions in Mida is called a block. However, to avoid confusion with the common term, we refer to it as a "blawc."
+The second way to do multitrack compositions in Mida is called a block. However, to avoid confusion with the common term, we refer to it as a *blawc.* To start a blawc, type this operator.
 
 ``~#` 
 
-The contents of the block delimited by single quotes, like so: Each audicle will start at the same time, just like chaining an audicle.
+The contents of the block are delimited by single quotes, like so: Each audicle will start at the same time, just like chaining an Audicle, but without needing to use the tilde operator to link them manually. 
 
 ```
 `~#
@@ -73,3 +73,4 @@ The contents of the block delimited by single quotes, like so: Each audicle will
 '
 ```
 
+Since they don't need to be connected by tildes, Mida blawcs open the door for non-local Audicles to have synchronous  start times. This makes it much easier to manage layered compositions without having to keep everything in one chain. 
