@@ -89,7 +89,7 @@ Lyricles are lyrical Audicles. They get delimited by double quotes instead of as
 
 **Type Set** is Mida's system for drum notation. Type Set notation uses special symbols to denote rhythmic events, and uses parentheses as delimiters; and is on an 8th note grid instead of a 16th note grid.
 **The direction that the note is facing determines the swing**
-|| Standard Hits |>
+Standard Hits
 
 ```
 *|
@@ -98,7 +98,7 @@ or...
 ```
 |*
 ```
-|| Accented Hit |>
+Accented Hit
 ```
 ^|
 ```
@@ -106,7 +106,7 @@ or...
 ```
 |^
 ```
-|| Ghost Note |>
+Ghost Note
 ```
 v|
 ```
@@ -114,7 +114,7 @@ or...
 ```
 |v
 ```
-|| Flam |>
+Flam
 ```
 /|
 ```
@@ -122,7 +122,7 @@ or...
 ```
 |/
 ```
-|| Drag |>
+Drag
 ```
 *|,
 ```
@@ -130,7 +130,7 @@ or...
 ```
 ,|*
 ```
-|| Double Stroke |>
+Double Stroke
 ```
 **|
 ```
@@ -138,11 +138,11 @@ or...
 ```
 |**
 ```
-|| 8th Note Rests Are Underscores |>
+8th Note Rests Are Underscores
 ```
 _
 ```
-|| For Rolls, triplet, quintuplets, etc; Curly braces indicate rhythmic events that will happen in a single 8th note |>
+For Rolls, triplet, quintuplets, etc; Curly braces indicate rhythmic events that will happen in a single 8th note
 ```
 {*| *| *|} || Triplet 8th Notes |>
 ```
