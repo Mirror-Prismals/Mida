@@ -89,16 +89,18 @@ Lyricles are lyrical Audicles. They get delimited by double quotes instead of as
 
 **Type Set** is Mida's system for drum notation. Type Set notation uses special symbols to denote rhythmic events, and uses parentheses as delimiters; and is on an 8th note grid instead of a 16th note grid.
 
+|| Standard Hits |>
+
 ```
-|| Standard Hit |>
 *|
 ```
-or...
+or
 ```
 |*
 ```
-```
+
 || Accented Hit |>
+```
 ^|
 ```
 or...
