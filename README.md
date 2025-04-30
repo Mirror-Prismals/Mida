@@ -76,3 +76,11 @@ The contents of the block are delimited by single quotes, like so: Each audicle 
 
 Since they don't need to be connected by tildes, Mida blawcs open the door for non-local Audicles to have synchronous start times. This makes it much easier to manage layered compositions without having to keep everything in one chain. 
 The output would be exactly the same as the chained Audicle example.
+
+## Mida Basics: The Lyricle
+
+Lyricles are lyrical Audicles. They get delimited by double quotes instead of asterisks, and show lyric information instead of note information, but the same rules apply. 
+
+```
+"Hello - - | World . . Of~Music . ." ||  "Hello" plays for 3 16th notes. "World" plays for 1 16th note then rests for 2. "Of~Music" is connected by a tilde which means both words are to be performed in that single 16th note. |>
+```
