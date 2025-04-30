@@ -146,6 +146,15 @@ For Rolls, triplet, quintuplets, etc; Curly braces indicate rhythmic events that
 ```
 {*| *| *|} || Triplet 8th Notes |>
 ```
+### Full Patterns
 
+```
+(*| _ ^| _ *| _ ^| _)
+```
+A Simple four on the floor beat. Instruments are inferred, not explicitly denoted. 
+```
+(*| {|* *|})
+```
+A Simple swung "High-Hat" pattern.
 
 
