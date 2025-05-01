@@ -133,9 +133,15 @@ myAssignment <~*^
 ```
 Simply name things with ^*~> and call them with <~*^, overloaded functions can be done easily easily sync Audicles. 
 ```
-myPolyCHORD ^*~> *C#4~E4~G#4 - - - | . . . .*
-myPolyCHORD ^*~> *F#1~F#2 - - - | - - - -*
-myPolyCHORD <~*^
+myOverloadedCHORD ^*~> *C#4~E4~G#4 - - - | . . . .*
+myOverloadedCHORD ^*~> *F#1~F#2 - - - | - - - -*
+myOverloadedCHORD <~*^
 ```
-
+Assigning both Audicles overloads the name with both instead of overwriting. We can even achieve true polymorphism and overload the same name with different types of audicles. 
+```
+myPolymorphic ^*~> *C#4~E4~G#4 - - - | . . . .*
+myPolymorphic ^*~> "Hello! - - - | - - - -"
+myPolymorphic ^*~> (|* _ ^| _)
+myPolymorphic <~*^
+```
 
