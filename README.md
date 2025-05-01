@@ -73,7 +73,6 @@ The contents of the block are delimited by single quotes, like so: Each audicle 
 *F#1~F#2 - - - | - - - -*
 '
 ```
-
 Since they don't need to be connected by tildes, Mida blawcs open the door for non-local Audicles to have synchronous start times. This makes it much easier to manage layered compositions without having to keep everything in one chain. 
 The output would be exactly the same as the chained Audicle example.
 
@@ -114,5 +113,29 @@ A Simple four on the floor beat. Instruments are inferred, not explicitly denote
 (*| {|* *|})
 ```
 A Simple swung "High-Hat" pattern.
+
+## Intermediate: Polymorphism
+The third way to do multitrack compositions in Mida is with the following operators: 
+
+The Assignment Operator
+```
+^*~> 
+```
+The Call Operator
+
+```
+<~*^
+```
+The **Assignment** and **Call** operators are two frequently used operators, and can act as a swiss army knife depending on the context. In this section we'll learn how to use them for basic multitrack compositions without a Blawc or a Tilde.
+```
+myAssignment ^*~> *C4 - - - Bb3 - - .*
+myAssignment <~*^
+```
+Simply name things with ^*~> and call them with <~*^, overloaded functions can be done easily easily sync Audicles. 
+```
+myPolyCHORD ^*~> *C#4~E4~G#4 - - - | . . . .*
+myPolyCHORD ^*~> *F#1~F#2 - - - | - - - -*
+myPolyCHORD <~*^
+```
 
 
