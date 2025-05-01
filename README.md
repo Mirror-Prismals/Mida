@@ -156,7 +156,7 @@ myPolymorphic <~*^
 ```
 ## Intermediate Mida: The Static Mix
 
-Once you’ve arranged your Audicles, you’ll often want to set levels, panning, or simple cuts before exporting or importing into your DAW. Mida’s **Static Mix** layer lets you declare immutable mix parameters right in your text score:
+Once you’ve arranged your Audicles, you’ll often want to set levels, panning, or simple cuts. Mida’s **Static Mix** layer lets you declare immutable mix parameters right in your text score:
 
 ```mida
 'Kick 1' <~*^
