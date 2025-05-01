@@ -154,4 +154,20 @@ myPolymorphic ^*~> "Hello! - - - | - - - -"
 myPolymorphic ^*~> (|* _ ^| _)
 myPolymorphic <~*^
 ```
+## Intermediate Mida: The Static Mix
 
+Once you’ve arranged your Audicles, you’ll often want to set levels, panning, or simple cuts before exporting or importing into your DAW. Mida’s **Static Mix** layer lets you declare immutable mix parameters right in your text score:
+
+```mida
+'Kick 1' <~*^
+  |||   = -3db   || Gain: turn down 3 dB  
+  <&>   = -10     || Pan: 10% left  
+  <^|   = 10khz   || Hi-cut (low-pass) at 10 kHz  
+  |^>   = 80hz    || Lo-cut (high-pass) at 80 Hz  
+
+'Snare 1' <~*^
+  |||   = -6db   || Gain: turn down 6 dB  
+  <&>   =  20     || Pan: 20% right  
+  <^|   = 12khz  
+  |^>   = 100hz  
+```
