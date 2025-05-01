@@ -106,6 +106,7 @@ Flam              /|   or   |/
 Drag              *|,  or   ,|*
 Double Stroke     **|  or   |**
 Rest              _
+Roll              {}
 ```
 
 For Rolls, triplet, quintuplets, etc; Curly braces indicate rhythmic events that will happen in a single 8th note
