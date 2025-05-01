@@ -114,7 +114,7 @@ A Simple four on the floor beat. Instruments are inferred, not explicitly denote
 ```
 A Simple swung "High-Hat" pattern.
 
-## Intermediate: Polymorphism
+## Intermediate Mida: Polymorphism
 The third way to do multitrack compositions in Mida is with the following operators: 
 
 The Assignment Operator
