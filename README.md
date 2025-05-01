@@ -171,3 +171,27 @@ Snare1 ^*~>
 <^|   = 12khz  
 |^>   = 100hz  
 ```
+## Advanced Mida: Programmatic Mida
+
+For the more savvy mida users, mida offers a lightweight programming layer offering traditional programming paradigms.
+
+### Hello World
+printing to the console (As opposed to the audicle log!) is very simple in Mida. All you have to do is use the p keyword with parenthesis and quotes, which has been reserved for this use.
+```mida
+p("Hello World")
+```
+### Methods and Functions
+Functions and Method Definitons in mida use the `d` keyword followed by the type, then the method name in double quotes, followed by patenthesis with the arguments or parameters of the method. Lets take a look.
+```mida
+d int "myFunkyFUNCTION"(int a, int b)
+return { a + b }
+myFunkyFUNCTION(2, 3) <~*^
+```
+### Homogeneous typing
+In Mida, the h keyword lets you assign a single type to both the return value and all parameters of a function. This keeps declarations clean and compact.
+```mida
+h d int "myFunkyFUNCTION"(a, b, c)
+  return { a + b }
+
+myFunkyFUNCTION(1, 2, 3) <~*^   || returns 3
+```
