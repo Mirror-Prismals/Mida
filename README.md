@@ -156,18 +156,18 @@ myPolymorphic <~*^
 ```
 ## Intermediate Mida: The Static Mix
 
-Once you’ve arranged your Audicles, you’ll often want to set levels, panning, or simple cuts. Mida’s **Static Mix** layer lets you declare immutable mix parameters right in your text score:
+Once you’ve arranged your Audicles, you’ll often want to set levels, panning, or simple cuts. Mida’s **Static Mix** layer lets you declare crucial mix parameters right in your text score without overreaching into bloated features. 
 
 ```mida
-'Kick 1' <~*^
-  |||   = -3db   || Gain: turn down 3 dB  
-  <&>   = -10     || Pan: 10% left  
-  <^|   = 10khz   || Hi-cut (low-pass) at 10 kHz  
-  |^>   = 80hz    || Lo-cut (high-pass) at 80 Hz  
+Kick1 ^*~>
+|||   = -3db   || Gain: turn down 3 dB  
+<&>   = -10     || Pan: 10% left  
+<^|   = 10khz   || Hi-cut (low-pass) at 10 kHz  
+|^>   = 80hz    || Lo-cut (high-pass) at 80 Hz  
 
-'Snare 1' <~*^
-  |||   = -6db   || Gain: turn down 6 dB  
-  <&>   =  20     || Pan: 20% right  
-  <^|   = 12khz  
-  |^>   = 100hz  
+Snare1 ^*~>
+|||   = -6db   || Gain: turn down 6 dB  
+<&>   =  20     || Pan: 20% right  
+<^|   = 12khz  
+|^>   = 100hz  
 ```
