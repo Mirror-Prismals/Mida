@@ -83,7 +83,16 @@ Lyricles are lyrical Audicles. They get delimited by double quotes instead of as
 ```
 "Hello - - | World . . Of~Mida . ." ||  "Hello" plays for 3 16th notes. "World" plays for 1 16th note then rests for 2. "Of~Music" is connected by a tilde which means both words are to be performed in that single 16th note. |>
 ```
-
+## Mida Basics: Loops
+It's often desirable while writing Mida to want to loop things. Mida makes this easy to do by simply wrapping you audicle in question in a pair of curly braces, and putting a number before the brace opens to denote the number of times it loops. 
+```
+4 {*Bb3 - . | D3~F3 . . | D3~F3 . . *} || Loops the audicle four times |>
+```
+Loops work for any kind of Audicle, and can also be nested.
+```
+4 {"Hi~ - . | You . . | There . . "
+4 {"I'm - - Here! - ."} } || Inner Loop Plays 4 Times For Each Outer Loop, Making the inner loop play for a total of 16 times  |>
+```
 ## Intermediate Mida: Type Set Bunkers
 
 **Type Set** is Mida's system for drum notation. Type Set notation uses special symbols to denote rhythmic events, and uses parentheses as delimiters; and is on an 8th note grid instead of a 16th note grid.
