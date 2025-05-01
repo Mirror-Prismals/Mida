@@ -184,7 +184,8 @@ p("Hello World")
 Functions and Method Definitons in mida use the `d` keyword followed by the type, then the method name in double quotes, followed by patenthesis with the arguments or parameters of the method. Lets take a look.
 ```mida
 d int "myFunkyFUNCTION"(int a, int b)
-return { a + b }
+  return { a + b }
+
 myFunkyFUNCTION(2, 3) <~*^
 ```
 ### Homogeneous typing
