@@ -114,15 +114,15 @@ For Rolls, triplet, quintuplets, etc; Curly braces indicate rhythmic events that
 {*| *| *|} || Triplet 8th Notes |>
 ```
 ### Full Patterns
-
+To actually delimit type set, we use parentheses and call it a **Bunker.** Here is an example of a simple four on the floor beat. Instruments are inferred, not explicitly denoted. 
 ```
 (*| _ ^| _ *| _ ^| _)
 ```
-A Simple four on the floor beat. Instruments are inferred, not explicitly denoted. 
+A Simple swung "High-Hat" pattern that uses a **Roll.** Inside type set's parenthesis "Bunkers," curly braces act as rolls, not loops, squeezing multiple hits into one 8th note event.
 ```
 (*| {|* *|})
 ```
-A Simple swung "High-Hat" pattern.
+
 
 ## Intermediate Mida: Polymorphism
 The third way to do multitrack compositions in Mida is with the following operators: 
