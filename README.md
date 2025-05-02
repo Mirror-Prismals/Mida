@@ -6,7 +6,7 @@ While it's possible to generate musical patches using LLMs with programming lang
 
 My hope is that by sharing this language, more people start to get interested in teaching LLMs how to generate music purely from text. Please check out the Github repository if you're interested in learning more. Thank you!
 ## What The ^*~> Is Mida?
-Mida is a musical language designed to be a fully drop in replacement for MIDI, not a backend for it. Unlike ABC notation, Mida supports drums, lyrics, and multitracked composition. Let's begin learning how to write Mida.
+Mida is a musical language designed to be a fully drop-in replacement for MIDI, not a backend for it. Unlike ABC notation, Mida supports drums, lyrics, and multitracked composition. Let's begin learning how to write Mida.
 
 ## Mida Basics: The Audicle
 
@@ -15,14 +15,14 @@ Mida is a musical language designed to be a fully drop in replacement for MIDI, 
 ```  
 
 
-This is an **Audicle.** It's the basic building block of everything in mida. In mida, an audicle is delimited by asterisks, and the information inside will be played on a quantized 16th note grid, no matter what, so in this audicle what you see here is three sixteenth notes. To add sustains and rests, we **simply add a period or a hyphen for each 16th sustain or 16th note rest** we want to add, and to make notes trigger polyphonically, we connect them with a tilde. To keep things well organized, we can use pipes to look like measure lines, but these will be ignored by our parser. Comments are done with double pipes outside audicles, and multi-line comments are endcapped with a pipe and a greater-than symbol. Notes must have an octave and a pitch, and optionally an accidental with `#` or `b`
+This is an **Audicle.** It's the basic building block of everything in mida. In mida, an Audicle is delimited by asterisks, and the information inside will be played on a quantized 16th note grid, no matter what, so in this Audicle, what you see here are three sixteenth notes, they are played one after the other. To add sustains and rests, we **simply add a period or a hyphen for each 16th sustain or 16th note rest** we want to add, and to make notes trigger polyphonically, we connect them with a tilde. To keep things well organized, we can use pipes to look like measure lines, but these will be ignored by our parser. Comments are done with double pipes outside Audicles, and multi-line comments are end-capped with a pipe and a greater-than symbol. Notes must have an octave and a pitch, and optionally an accidental with `#` or `b`
 
 
 ## Mida Basics: Sustains, Rests, Polyphony, Accidentals, and Decoration.
 ```mida
 *C#4~E4~G#4 - - - | . . . .* || Cmaj 4th Octave Quarter Note + Quarter Note Rest |>
 ```
-Next we will cover multitracking, lyrics, drums, loops, and more; but first, I feel as though it would be worth mentioning how the above Audicle would be printed. Mida prescribes a specific way that audicles be printed known as the Audicle Log. Essentially, the composition is played where each 16th note event gets its own line. this makes it possible to debug music and align tracks without playing them aloud.
+Next we will cover multitracking, lyrics, drums, loops, and more; but first, I feel as though it would be worth mentioning how the above Audicle would be printed. Mida prescribes a specific way that Audicles be printed known as the Audicle Log. Essentially, the composition is played where each 16th note event gets its own line. This makes it possible to debug music and align tracks without playing them aloud.
 
 
 ## Mida Basics: Chaining Audicles + The Audicle Log
@@ -64,7 +64,7 @@ Using chained Audicles is useful for simpler compositions, but sometimes you nee
 ```
 `~# 
 ```
-The contents of the block are delimited by single quotes, like so: Each audicle will start at the same time, just like chaining an Audicle, but without needing to use the tilde operator to link them manually. 
+The contents of the block are delimited by single quotes, like so: Each Audicle will start at the same time, just like chaining an Audicle, but without needing to use the tilde operator to link them manually. 
 
 ```
 `~#
@@ -84,7 +84,7 @@ Lyricles are lyrical Audicles. They get delimited by double quotes instead of as
 "Hello - - | World . . Of~Mida . ." ||  "Hello" plays for 3 16th notes. "World" plays for 1 16th note then rests for 2. "Of~Mida" is connected by a tilde which means both words are to be performed in that single 16th note. |>
 ```
 ## Mida Basics: Loops
-It's often desirable while writing Mida to want to loop things. Mida makes this easy to do by simply wrapping your audicle in question in a pair of curly braces, and putting a number before the brace opens to denote the number of times it loops. 
+It's often desirable while writing Mida to want to loop things. Mida makes this easy to do by simply wrapping your Audicle in question in a pair of curly braces, and putting a number before the brace opens to denote the number of times it loops. 
 ```
 4 {*Bb3 - . | D3~F3 . . | D3~F3 . . *} || Loops the audicle four times |>
 ```
@@ -118,7 +118,7 @@ To actually delimit type set, we use parentheses and call it a **Bunker.** Here 
 ```
 (*| _ ^| _ *| _ ^| _)
 ```
-A Simple swung "hi-hat" pattern that uses a **Roll.** Inside type set's parenthesis "Bunkers," curly braces act as rolls, not loops, squeezing multiple hits into one 8th note event.
+A Simple swung "hi-hat" pattern that uses a **Roll.** Inside type set's parenthesss "Bunkers," curly braces act as rolls, not loops, squeezing multiple hits into one 8th note event.
 ```
 (*| {|* *|})
 ```
@@ -141,7 +141,7 @@ The **Assignment** and **Call** operators are two frequently used operators, and
 myAssignment ^*~> *C4 - - - Bb3 - - .*
 myAssignment <~*^
 ```
-Simply name things with ```^*~> and call them with <~*^``` overloaded functions can be done easily sync Audicles. 
+Name an Audicle with ^*~>, then call it with <~*^. This lets you sync Audicles without tildes or blawcs.
 ```
 myOverloadedCHORD ^*~> *C#4~E4~G#4 - - - | . . . .*
 myOverloadedCHORD ^*~> *F#1~F#2 - - - | - - - -*
@@ -160,16 +160,16 @@ Once you’ve arranged your Audicles, you’ll often want to set levels, panning
 
 ```mida
 Kick1 ^*~>
-|||   = -3dB   || Gain: turn down 3 dB  
+|||   = -3 dB   || Gain: turn down 3 dB  
 <&>   = -10     || Pan: 10% left  
-<^|   = 10kHz   || Hi-cut (low-pass) at 10 kHz  
-|^>   = 80Hz    || Lo-cut (high-pass) at 80 Hz  
+<^|   = 10 kHz   || Hi-cut (low-pass) at 10 kHz  
+|^>   = 80 Hz    || Lo-cut (high-pass) at 80 Hz  
 
 Snare1 ^*~>
-|||   = -6db   || Gain: turn down 6 dB  
+|||   = -6 dB   || Gain: turn down 6 dB  
 <&>   =  20     || Pan: 20% right  
-<^|   = 12khz  
-|^>   = 100hz  
+<^|   = 12 khz  
+|^>   = 100 hz  
 ```
 ## Advanced Mida: Programmatic Mida
 
