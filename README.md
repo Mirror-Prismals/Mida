@@ -143,7 +143,7 @@ The **Assignment** and **Call** operators are two frequently used operators, and
 myAssignment ^*~> *C4 - - - Bb3 - - .*
 myAssignment <~*^
 ```
-Name an Audicle with ^*~>, then call it with <~*^. This lets you sync Audicles without tildes or blawcs.
+Name an Audicle with ```^*~>```, then call it with ```<~*^```. This lets you sync Audicles without tildes or blawcs.
 ```
 myOverloadedCHORD ^*~> *C#4~E4~G#4 - - - | . . . .*
 myOverloadedCHORD ^*~> *F#1~F#2 - - - | - - - -*
