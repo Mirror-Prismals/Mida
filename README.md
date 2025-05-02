@@ -225,9 +225,9 @@ The default, mutable variable.
 
 ```mida
 rv counter = 0
-p(counter)       || 0
+p("counter")       || 0
 counter = 1
-p(counter)       || 1
+p("counter")       || 1
 ```
 
 This is standard mutability. Values declared with `rv` can be reassigned freely.
