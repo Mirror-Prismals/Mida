@@ -4,7 +4,7 @@ One of the main challenges in teaching a language model to make music is the lac
 
 While it's possible to generate musical patches using LLMs with programming languages like Faust, ChucK, Humdrum, and others, none of these solutions provide what LLMs really need: A fully text based system for representing a complete song. It's more of a markdown language that a programming language.
 
-My hope is that my sharing this language, more people start to get interested in teaching LLMs how to generate music purely from text, please check out the github repository if you're interested in learning more. Thank you!
+My hope is that by sharing this language, more people start to get interested in teaching LLMs how to generate music purely from text, please check out the github repository if you're interested in learning more. Thank you!
 ## What The ^*~> Is Mida?
 Mida is a musical language designed to be fully text based drop in replacement for midi. Unlike ABC notation, mida supports drums, lyrics, and multitracked composition. Let's begin learning how to write Mida.
 
@@ -38,7 +38,7 @@ As an example, I'll connect two Audicles with a tilde, which means they will sta
 
 
 ```mida
-C#4~E4~G4 F#1~F#2
+C#4~E4~G#4 F#1~F#2
 
 - -
 
@@ -81,10 +81,10 @@ The output would be exactly the same as the chained Audicle example.
 Lyricles are lyrical Audicles. They get delimited by double quotes instead of asterisks, and show lyric information instead of note information, but the same rules apply. 
 
 ```
-"Hello - - | World . . Of~Mida . ." ||  "Hello" plays for 3 16th notes. "World" plays for 1 16th note then rests for 2. "Of~Music" is connected by a tilde which means both words are to be performed in that single 16th note. |>
+"Hello - - | World . . Of~Mida . ." ||  "Hello" plays for 3 16th notes. "World" plays for 1 16th note then rests for 2. "Of~Mida" is connected by a tilde which means both words are to be performed in that single 16th note. |>
 ```
 ## Mida Basics: Loops
-It's often desirable while writing Mida to want to loop things. Mida makes this easy to do by simply wrapping you audicle in question in a pair of curly braces, and putting a number before the brace opens to denote the number of times it loops. 
+It's often desirable while writing Mida to want to loop things. Mida makes this easy to do by simply wrapping your audicle in question in a pair of curly braces, and putting a number before the brace opens to denote the number of times it loops. 
 ```
 4 {*Bb3 - . | D3~F3 . . | D3~F3 . . *} || Loops the audicle four times |>
 ```
