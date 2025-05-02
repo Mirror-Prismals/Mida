@@ -223,9 +223,9 @@ The default, mutable variable.
 
 ```mida
 rv counter = 0
-p(counter)       // 0
+p(counter)       || 0
 counter = 1
-p(counter)       // 1
+p(counter)       || 1
 ```
 
 This is standard mutability. Values declared with `rv` can be reassigned freely.
@@ -279,4 +279,12 @@ rv
 ```
 
 This four-stage lifecycle enables fine-grained symbolic control over state, mutability, and memory evolution—ideal for AI architectures, creative computation, and contract-like logic where change and permanence must coexist.
-
+where it really shines: it gives you an elegant, symbolic contract for partial mutability. Like—just loop over your variables, and let bad lvs be your “anchored” elements.
+```
+rv pool = [1, 2, 3, 4, 5]
+bash pool[2]      || lock the third element
+bash pool[4]      || lock the fifth
+range 10 step 1 [pool] || In Mida, we can use the range and step keywords to make a "for loop"
+  bad lv ?! 
+    step = random()
+```
