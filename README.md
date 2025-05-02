@@ -22,13 +22,13 @@ This is an **Audicle.** It's the basic building block of everything in mida. In 
 ```mida
 *C#4~E4~G#4 - - - | . . . .* || Cmaj 4th Octave Quarter Note + Quarter Note Rest |>
 ```
-Next we will cover multitracking, lyrics, drums, loops, and more; but first, I feel as though it would be worth mentioning how the above Audicle would be printed. Mida perscribes a specific way that audicles be printed known as the Audicle Log. Essentially, the composition is played where each 16th note event gets its own line. this makes it possible to debug music and align tracks without playing them aloud.
+Next we will cover multitracking, lyrics, drums, loops, and more; but first, I feel as though it would be worth mentioning how the above Audicle would be printed. Mida prescribes a specific way that audicles be printed known as the Audicle Log. Essentially, the composition is played where each 16th note event gets its own line. this makes it possible to debug music and align tracks without playing them aloud.
 
 
 ## Mida Basics: Chaining Audicles + The Audicle Log
 
 
-As an example, ill connect two Audicles with a tilde, which means they will start at the same time, then I'll show what the log output would look like.
+As an example, I'll connect two Audicles with a tilde, which means they will start at the same time, then I'll show what the log output would look like.
 
 ```mida
 *C#4~E4~G#4 - - - | . . . .*~*F#1~F#2 - - - | - - - -*
@@ -141,7 +141,7 @@ The **Assignment** and **Call** operators are two frequently used operators, and
 myAssignment ^*~> *C4 - - - Bb3 - - .*
 myAssignment <~*^
 ```
-Simply name things with ```^*~> and call them with <~*^``` overloaded functions can be done easily easily sync Audicles. 
+Simply name things with ```^*~> and call them with <~*^``` overloaded functions can be done easily sync Audicles. 
 ```
 myOverloadedCHORD ^*~> *C#4~E4~G#4 - - - | . . . .*
 myOverloadedCHORD ^*~> *F#1~F#2 - - - | - - - -*
@@ -181,7 +181,7 @@ printing to the console (As opposed to the audicle log!) is very simple in Mida.
 p("Hello World")
 ```
 ### Methods and Functions
-Functions and Method Definitons in mida use the `d` keyword followed by the type, then the method name in double quotes, followed by patenthesis with the arguments or parameters of the method. Lets take a look.
+Functions and Method Definitions in mida use the `d` keyword followed by the type, then the method name in double quotes, followed by patenthesis with the arguments or parameters of the method. Lets take a look.
 ```mida
 d int "myFunkyFUNCTION"(int a, int b)
   return { a + b }
