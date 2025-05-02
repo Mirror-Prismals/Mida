@@ -113,7 +113,7 @@ Roll              {}
 
 For Rolls, triplet, quintuplets, etc; Curly braces indicate rhythmic events that will happen in a single 8th note
 ```
-{*| *| *|} || Triplet 8th Notes |>
+({*| *| *|}) || Triplet 8th Notes |>
 ```
 ### Full Patterns
 To actually delimit type set, we use parentheses and call it a **Bunker.** Here is an example of a simple four on the floor beat. Instruments are inferred, not explicitly denoted. 
