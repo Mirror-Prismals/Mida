@@ -118,7 +118,7 @@ To actually delimit type set, we use parentheses and call it a **Bunker.** Here 
 ```
 (*| _ ^| _ *| _ ^| _)
 ```
-A Simple swung "hi-hat" pattern that uses a **Roll.** Inside type set's parenthesss "Bunkers," curly braces act as rolls, not loops, squeezing multiple hits into one 8th note event.
+A Simple swung "hi-hat" pattern that uses a **Roll.** Inside type set's parentheses "Bunkers," curly braces act as rolls, not loops, squeezing multiple hits into one 8th note event.
 ```
 (*| {|* *|})
 ```
@@ -169,7 +169,7 @@ Snare1 ^*~>
 |||   = -6 dB   || Gain: turn down 6 dB  
 <&>   =  20     || Pan: 20% right  
 <^|   = 12 khz  
-|^>   = 100 hz  
+|^>   = 100 Hz  
 ```
 ## Advanced Mida: Programmatic Mida
 
