@@ -2,11 +2,11 @@
 ## Mida Music Programming Language
 One of the main challenges in teaching a language model to make music is the lack of proper tools for expressing musical ideas in text. Mida is a notation language I've designed to address that gap. Mida offers a more expressive, readable, and flexible alternative to ABC notation and RAW MIDI.
 
-While it's possible to generate musical patches using LLMs with programming languages like Faust, ChucK, Humdrum, and others, none of these solutions provide what LLMs really need: A completely text-based system representing a complete song.
+While it's possible to generate musical patches using LLMs with programming languages like Faust, ChucK, Humdrum, and others, none of these solutions provide what LLMs really need: A completely text-based system for representing a complete song.
 
-My hope is that by sharing this language, more people start to get interested in teaching LLMs how to generate music purely from text. Please check out the github repository if you're interested in learning more. Thank you!
+My hope is that by sharing this language, more people start to get interested in teaching LLMs how to generate music purely from text. Please check out the Github repository if you're interested in learning more. Thank you!
 ## What The ^*~> Is Mida?
-Mida is a musical language designed to be fully drop in replacement for MIDI, not a backend for it. Unlike ABC notation, mida supports drums, lyrics, and multitracked composition. Let's begin learning how to write Mida.
+Mida is a musical language designed to be a fully drop in replacement for MIDI, not a backend for it. Unlike ABC notation, Mida supports drums, lyrics, and multitracked composition. Let's begin learning how to write Mida.
 
 ## Mida Basics: The Audicle
 
@@ -15,7 +15,7 @@ Mida is a musical language designed to be fully drop in replacement for MIDI, no
 ```  
 
 
-This is an **Audicle.** It's the basic building block of everything in mida. In mida, an audicle is delimited by asterisks, and the information inside will be played on a quantized 16th note grid, no matter what, so this audicle you see here is three sixteenth notes. To add sustains and rests, we **simply add a period or a hyphen for each 16th sustain or 16th note rest** we want to add, and to make notes trigger polyphonically, we connect them with a tilde. To keep things well organized, we can use pipes to look like measure lines, but these will be ignored by our parser. Comments are done with double pipes outside audicles, and multi line comments are endcapped with a pipe and a greater-than symbol. Notes must have an octave and a pitch, and optionally an accidental with `#` or `b`
+This is an **Audicle.** It's the basic building block of everything in mida. In mida, an audicle is delimited by asterisks, and the information inside will be played on a quantized 16th note grid, no matter what, so in this audicle what you see here is three sixteenth notes. To add sustains and rests, we **simply add a period or a hyphen for each 16th sustain or 16th note rest** we want to add, and to make notes trigger polyphonically, we connect them with a tilde. To keep things well organized, we can use pipes to look like measure lines, but these will be ignored by our parser. Comments are done with double pipes outside audicles, and multi-line comments are endcapped with a pipe and a greater-than symbol. Notes must have an octave and a pitch, and optionally an accidental with `#` or `b`
 
 
 ## Mida Basics: Sustains, Rests, Polyphony, Accidentals, and Decoration.
@@ -34,7 +34,7 @@ As an example, I'll connect two Audicles with a tilde, which means they will sta
 *C#4~E4~G#4 - - - | . . . .*~*F#1~F#2 - - - | - - - -*
 ```
 
-### output:
+### Output:
 
 
 ```mida
@@ -55,7 +55,7 @@ C#4~E4~G#4 F#1~F#2
 . -
 ```
 
-In essense, the Audicle Log is your primary debugging tool, aside from your ears, for validating multitrack compositions. 
+In essence, the Audicle Log is your primary debugging tool, aside from your ears, for validating multitrack compositions. 
 
 ## Mida Basics: The Blawc
 
@@ -118,14 +118,14 @@ To actually delimit type set, we use parentheses and call it a **Bunker.** Here 
 ```
 (*| _ ^| _ *| _ ^| _)
 ```
-A Simple swung "High-Hat" pattern that uses a **Roll.** Inside type set's parenthesis "Bunkers," curly braces act as rolls, not loops, squeezing multiple hits into one 8th note event.
+A Simple swung "hi-hat" pattern that uses a **Roll.** Inside type set's parenthesis "Bunkers," curly braces act as rolls, not loops, squeezing multiple hits into one 8th note event.
 ```
 (*| {|* *|})
 ```
 
 
 ## Intermediate Mida: Polymorphism
-The third way to do multitrack compositions in Mida is with the following operators: 
+The third way to do multi-track compositions in Mida is with the following operators: 
 
 The Assignment Operator
 ```
@@ -136,7 +136,7 @@ The Call Operator
 ```
 <~*^
 ```
-The **Assignment** and **Call** operators are two frequently used operators, and can act as a swiss army knife depending on the context. In this section we'll learn how to use them for basic multitrack compositions without a Blawc or a Tilde.
+The **Assignment** and **Call** operators are two frequently used operators, and can act as a Swiss-Army knife depending on the context. In this section we'll learn how to use them for basic multitrack compositions without a Blawc or a Tilde.
 ```
 myAssignment ^*~> *C4 - - - Bb3 - - .*
 myAssignment <~*^
@@ -160,10 +160,10 @@ Once you’ve arranged your Audicles, you’ll often want to set levels, panning
 
 ```mida
 Kick1 ^*~>
-|||   = -3db   || Gain: turn down 3 dB  
+|||   = -3dB   || Gain: turn down 3 dB  
 <&>   = -10     || Pan: 10% left  
-<^|   = 10khz   || Hi-cut (low-pass) at 10 kHz  
-|^>   = 80hz    || Lo-cut (high-pass) at 80 Hz  
+<^|   = 10kHz   || Hi-cut (low-pass) at 10 kHz  
+|^>   = 80Hz    || Lo-cut (high-pass) at 80 Hz  
 
 Snare1 ^*~>
 |||   = -6db   || Gain: turn down 6 dB  
@@ -173,15 +173,15 @@ Snare1 ^*~>
 ```
 ## Advanced Mida: Programmatic Mida
 
-For the more savvy mida users, mida offers a lightweight programming layer offering traditional programming paradigms.
+For the more savvy Mida users, Mida offers a lightweight programming layer offering traditional programming paradigms.
 
 ### Hello World
-printing to the console (As opposed to the audicle log!) is very simple in Mida. All you have to do is use the p keyword with parenthesis and quotes, which has been reserved for this use.
+printing to the console (As opposed to the audicle log!) is very simple in Mida. All you have to do is use the p keyword with parentheses and quotes, which has been reserved for this use.
 ```mida
 p("Hello World")
 ```
 ### Methods and Functions
-Functions and Method Definitions in mida use the `d` keyword followed by the type, then the method name in double quotes, followed by patenthesis with the arguments or parameters of the method. Lets take a look.
+Functions and Method Definitions in Mida use the `d` keyword followed by the type, then the method name in double quotes, followed by patenthesis with the arguments or parameters of the method. Lets take a look.
 ```mida
 d int "myFunkyFUNCTION"(int a, int b)
   return { a + b }
