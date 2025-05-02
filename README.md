@@ -214,4 +214,69 @@ Chef(chopped, salad_done)
 In this example, "Chef" is a function which takes two $f classed functions as arguments. Each $f contains a musical sequence that resolves to a symbol using ~>. The function will only return once both chopped and salad_done have been resolved. The |||| operator ensures this happens deterministically.
 
 This provides a minimal mechanism for synchronization across symbolic layers, allowing one function’s output to wait on the completion of multiple events. The system does not use clocks or timers—resolution is entirely symbolic.
+## Advanced Mida: Value Mutability – The Four-Stage Evolution
+
+Mida’s value system transcends the typical binary of mutable vs immutable. Instead, it defines a symbolic lifecycle for variable state—ideal for modeling systems where knowledge must evolve or stabilize over time. There are four primary stages of mutability in Mida:
+
+### Stage 1: Real Value — `rv`
+The default, mutable variable.
+
+```mida
+rv counter = 0
+p(counter)       // 0
+counter = 1
+p(counter)       // 1
+```
+
+This is standard mutability. Values declared with `rv` can be reassigned freely.
+
+---
+
+### Stage 2: Bad Latent Value — `bash rv` → `bad lv`
+A `bash`ed value becomes *resistant*. It retains its current value but ignores further assignments.
+
+```mida
+rv setting = "initial"
+bash setting         || Now a bad lv
+setting = "attempted change" || Ignored
+print setting        || "initial"
+```
+
+This is not true immutability—it’s symbolic stubbornness. Once `bash`ed, the value holds firm but doesn't throw an error.
+
+---
+
+### Stage 3: Latent Value — `wash lv`
+To fully solidify a value as unchangeable, we `wash` it. This converts a `bad lv` into a true `lv`—a literal value.
+
+```mida
+bad lv result = 42
+wash lv result
+result = 99          || Error!
+```
+
+This finalizes the value. Any attempt to modify it will fail.
+
+---
+
+### Stage 4: Pepper’s Ghost — `mint lv` → `pg rv`
+Mida allows for a unique concept: mutable clones derived from stable truths.
+
+
+A `pg rv` is a “Pepper’s Ghost” — a persistent, forever-mutable shadow of an immutable source. It’s a one-way transformation: once minted, the clone can never revert or overwrite its origin.
+
+This pattern is essential for AI systems: stable memory can be minted into dynamic working contexts.
+
+---
+
+### Summary Lifecycle
+
+```text
+rv 
+  (bash)  bad lv 
+    (wash)  lv 
+      (mint)  pg rv
+```
+
+This four-stage lifecycle enables fine-grained symbolic control over state, mutability, and memory evolution—ideal for AI architectures, creative computation, and contract-like logic where change and permanence must coexist.
 
