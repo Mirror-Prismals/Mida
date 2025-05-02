@@ -1,5 +1,5 @@
-[Join Our Discord!](https://discord.gg/h7e55TPGEf)
 ![Mida Logo](https://github.com/Mirror-Prismals/Mida/blob/main/logo.png?raw=true)
+[Join Our Discord!](https://discord.gg/h7e55TPGEf)
 # Mida
 ## Mida Music Programming Language
 One of the main challenges in teaching a language model to make music is the lack of proper tools for expressing musical ideas in text. Mida is a notation language I've designed to address that gap. Mida offers a more expressive, readable, and flexible alternative to ABC notation and RAW MIDI.
