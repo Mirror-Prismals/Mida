@@ -213,7 +213,7 @@ return {chopped |||| salad_done}
 
 Chef(chopped, salad_done)
 ```
-In this example, "Chef" is a function which takes two $f classed functions as arguments. Each $f contains a musical sequence that resolves to a symbol using ~>. The function will only return once both chopped and salad_done have been resolved. The |||| operator ensures this happens deterministically.
+In this example, "Chef" is a function which takes two $f classed functions as arguments. Each $f contains a musical sequence that resolves to a symbol using ```^*~>```. The function will only return once both chopped and salad_done have been resolved. The |||| operator ensures this happens deterministically.
 
 This provides a minimal mechanism for synchronization across symbolic layers, allowing one function’s output to wait on the completion of multiple events. The system does not use clocks or timers—resolution is entirely symbolic.
 ## Advanced Mida: Value Mutability – The Four-Stage Evolution
