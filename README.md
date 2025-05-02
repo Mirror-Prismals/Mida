@@ -1,6 +1,6 @@
 # Mida
 ## Mida Music Programming Language
-One of the main challenges in teaching a language model to make music is that no system affords an LLM the proper tools to express musical ideas in text form. Today im happy to present a notation language I've designed called "Mida" which is aimed at alleviating these stress points and moving the field towards models which are more capable at generating music without leaving text generation. Mida offers a more expressive, readable, and flexible alternative to ABC notation and RAW MIDI for text-based music creation.
+One of the main challenges in teaching a language model to make music is the lack of proper tools for expressing musical ideas in text. Mida is a notation language I've designed to address that gap. Mida offers a more expressive, readable, and flexible alternative to ABC notation and RAW MIDI for text-based music creation.
 
 While it's possible to generate musical patches using LLMs with programming languages like Faust, ChucK, Humdrum, and others, none of these solutions provide what LLMs really need: A fully text based system for representing a complete song. It's more of a markdown language that a programming language.
 
@@ -200,7 +200,7 @@ myFunkyFUNCTION(1, 2, 3) <~*^   || returns 3
 ## Advanced Mida: Classical Concurrency
 Inspired by classical concurrency primitives like barriers and joins, Mida introduces a clean symbolic solution in the Fence Operator. The |||| operator is used to block a return until multiple required symbols have been emitted. This allows coordination of symbolic events without the need for threading, scheduling, or manual dependency tracking.
 ### The Fence Operator: `||||`
-In Mida, the fence operator
+In Mida, the fence operator is used like so:
 ```
 d str "Chef"(
   $f chop @ (^| ^| ^|) ^*~> chopped,
