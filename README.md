@@ -1,4 +1,4 @@
-[Join our Discord]([https://discord.gg/YOURINVITECODE](https://discord.gg/h7e55TPGEf))
+[Join our Discord](https://discord.gg/YOURINVITECODE](https://discord.gg/h7e55TPGEf)
 
 # Mida
 ## Mida Music Programming Language
