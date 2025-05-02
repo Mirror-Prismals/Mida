@@ -6,7 +6,7 @@ One of the main challenges in teaching a language model to make music is the lac
 
 While it's possible to generate musical patches using LLMs with programming languages like Faust, ChucK, Humdrum, and others, none of these solutions provide what LLMs really need: A completely text-based system for representing a full-length, fully produced song.
 
-My hope is that by sharing this language, more people start to get interested in teaching LLMs how to generate music purely from text. Please check out the Github repository if you're interested in learning more. Thank you!
+Our hope is that by sharing this language, more people start to get interested in teaching LLMs how to generate music purely from text. Please check out the README below if you're interested in learning more. Thank you!
 ## What The ^*~> Is Mida?
 Mida is a musical language designed to be a fully drop-in replacement for MIDI, not a backend for it. Unlike ABC notation, Mida supports drums, lyrics, and multitracked composition. Let's begin learning how to write Mida.
 
