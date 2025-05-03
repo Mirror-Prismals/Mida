@@ -92,7 +92,7 @@ It's often desirable while writing Mida to want to loop things. Mida makes this 
 ```
 Loops work for any kind of Audicle, and can also be nested.
 ```
-4 {"Hi~ - . | You . . | There . . "
+4 {"Hi - . | You . . | There . . "
 4 {"I'm - - Here! - ."} } || Inner Loop Plays 4 Times For Each Outer Loop, Making the inner loop play for a total of 16 times  |>
 ```
 ## Intermediate Mida: Type Set Bunkers
