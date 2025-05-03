@@ -163,15 +163,16 @@ Once you’ve arranged your Audicles, you’ll often want to set levels, panning
 ```mida
 Kick1 ^*~>
 |||   = -3 dB   || Gain: turn down 3 dB  
-<&>   = -10     || Pan: 10% left  
-<^|   = 10 kHz   || Hi-cut (low-pass) at 10 kHz  
+<&>   = -10     || Pan: 10% left
 |^>   = 80 Hz    || Lo-cut (high-pass) at 80 Hz  
+<^|   = 10 kHz   || Hi-cut (low-pass) at 10 kHz  
+
 
 Snare1 ^*~>
 |||   = -6 dB   || Gain: turn down 6 dB  
-<&>   =  20     || Pan: 20% right  
-<^|   = 12 khz  
+<&>   =  20     || Pan: 20% right
 |^>   = 100 Hz  
+<^|   = 12 khz  
 ```
 ## Advanced Mida: Programmatic Mida
 
