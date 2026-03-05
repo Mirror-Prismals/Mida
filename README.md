@@ -156,3 +156,20 @@ myPolymorphic ^*~> "Hello! - - - | - - - -"
 myPolymorphic ^*~> (|* _ ^| _)
 myPolymorphic <~*^
 ```
+## Advanced Mida: Classical Concurrency
+Inspired by classical concurrency primitives like barriers and joins, Mida introduces a clean symbolic solution in the Fence Operator. The ||| operator is used to block a return until multiple required symbols have been emitted. This allows coordination of symbolic events without the need for threading, scheduling, or manual dependency tracking.
+### The Fence Operator: `|||`
+In Mida, the fence operator is used like so:
+```
+d str "Chef"(
+  $f chop @ (^| ^| ^|) ^*~> chopped,
+  $f salad @ *F5 - - - | - - - - * ^*~> salad_done
+)
+
+return {chopped ||| salad_done}
+
+Chef(chopped, salad_done)
+```
+In this example, "Chef" is a function which takes two $f classed functions as arguments. Each $f contains a musical sequence that resolves to a symbol using ```^*~>```. The function will only return once both chopped and salad_done have been resolved. The ||| operator ensures this happens deterministically.
+
+This provides a minimal mechanism for synchronization across symbolic layers, allowing one function’s output to wait on the completion of multiple events. The system does not use clocks or timers—resolution is entirely symbolic.
